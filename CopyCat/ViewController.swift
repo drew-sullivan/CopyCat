@@ -12,6 +12,7 @@ import FirebaseMLVision
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     var textRecognizer: VisionTextRecognizer!
+    var ocrLines: [String]?
     
     @IBOutlet var imageView: UIImageView!
 
@@ -40,22 +41,29 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         let rotatedImage = image.rotate(radians: .pi * 2)
         let visionImage = VisionImage(image: rotatedImage!)
         textRecognizer.process(visionImage, completion: { (features, error) in
-            self.printTextToScreen(from: features, error: error)
+            let lines = self.extractLinesFromDocument(from: features, error: error)
+            self.switchScreen(given: lines)
         })
     }
     
     //MARK: - Helpers
-    func printTextToScreen(from text: VisionText?, error: Error?) {
+    func extractLinesFromDocument(from text: VisionText?, error: Error?) -> [String] {
+        var lines: [String] = []
         guard let features = text else {
-            return
+            return lines
         }
+        
         for block in features.blocks {
+//            print("\nBLOCK\n\(block.text)")
             for line in block.lines {
+//                print("\nLINE\n\(line.text)")
+                lines.append(line.text)
                 for element in line.elements {
-                    print(element.text)
+//                    print(element.text)
                 }
             }
         }
+        return lines
     }
     
     // MARK: - ImagePickerController
@@ -64,5 +72,14 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         imageView.image = image
         runTextRecognition(on: imageView.image!)
         dismiss(animated: true, completion: nil)
+    }
+    
+    func switchScreen(given lines: [String]) {
+        print(lines)
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let newViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "CopyPasteTableViewController") as UIViewController
+        self.present(newViewController, animated: true, completion: {
+            print("newViewController")
+        })
     }
 }

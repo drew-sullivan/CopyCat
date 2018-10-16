@@ -48,10 +48,39 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="red-tX-WkM" id="s5j-O0-5Ms"/>
+                        <segue destination="VGk-tK-yea" kind="show" id="h9M-rF-hSY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-366" y="36"/>
+        </scene>
+        <!--Copy Paste Table View Controller-->
+        <scene sceneID="RQS-OS-sfY">
+            <objects>
+                <viewController storyboardIdentifier="CopyPasteTableViewController" id="VGk-tK-yea" customClass="CopyPasteTableViewController" customModule="CopyCat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q3Z-iq-9C6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8X-U5-yd3">
+                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Wt1-n7-0yn"/>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="S8X-U5-yd3" id="Rel-xM-dIu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cQS-aK-cLy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="501" y="36"/>
         </scene>
     </scenes>
 </document>
