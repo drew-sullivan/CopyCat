@@ -35,28 +35,17 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         present(imagePicker, animated: true, completion: nil)
     }
     
-    // MARK: - ImagePickerController
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        imageView.image = image
-        runTextRecognition(on: imageView.image!)
-        dismiss(animated: true, completion: nil)
-    }
-    
     //MARK: - Text Recognition
     func runTextRecognition(on image: UIImage) {
         let rotatedImage = image.rotate(radians: .pi * 2)
-//        let rotatedImage2 = image.rotate(radians: .pi / 2)
-//        let rotatedImage3 = image.rotate(radians: .pi / 2)
-//        let rotatedImage4 = image.rotate(radians: .pi / 2)
         let visionImage = VisionImage(image: rotatedImage!)
         textRecognizer.process(visionImage, completion: { (features, error) in
-            self.processResult(from: features, error: error)
+            self.printTextToScreen(from: features, error: error)
         })
     }
     
     //MARK: - Helpers
-    func processResult(from text: VisionText?, error: Error?) {
+    func printTextToScreen(from text: VisionText?, error: Error?) {
         guard let features = text else {
             return
         }
@@ -69,4 +58,11 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         }
     }
     
+    // MARK: - ImagePickerController
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        imageView.image = image
+        runTextRecognition(on: imageView.image!)
+        dismiss(animated: true, completion: nil)
+    }
 }
