@@ -45,7 +45,11 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     //MARK: - Text Recognition
     func runTextRecognition(on image: UIImage) {
-        let visionImage = VisionImage(image: image)
+        let rotatedImage = image.rotate(radians: .pi * 2)
+//        let rotatedImage2 = image.rotate(radians: .pi / 2)
+//        let rotatedImage3 = image.rotate(radians: .pi / 2)
+//        let rotatedImage4 = image.rotate(radians: .pi / 2)
+        let visionImage = VisionImage(image: rotatedImage!)
         textRecognizer.process(visionImage, completion: { (features, error) in
             self.processResult(from: features, error: error)
         })
