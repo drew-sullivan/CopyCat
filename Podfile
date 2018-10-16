@@ -6,6 +6,7 @@ target 'CopyCat' do
   use_frameworks!
 
   # Pods for CopyCat
+  pod 'Firebase'
   pod 'Firebase/Core'
   pod 'Firebase/MLVision'
   pod 'Firebase/MLVisionTextModel'

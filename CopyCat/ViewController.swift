@@ -7,16 +7,22 @@
 //
 
 import UIKit
+import FirebaseMLVision
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    var textRecognizer: VisionTextRecognizer!
+    
     @IBOutlet var imageView: UIImageView!
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let vision = Vision.vision()
+        textRecognizer = vision.onDeviceTextRecognizer()
     }
     
+    // MARK: - Actions
     @IBAction func takePicture(_ sender: UIBarButtonItem) {
         let imagePicker = UIImagePickerController()
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -28,11 +34,35 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         imagePicker.delegate = self
         present(imagePicker, animated: true, completion: nil)
     }
- 
+    
+    // MARK: - ImagePickerController
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         imageView.image = image
+        runTextRecognition(on: imageView.image!)
         dismiss(animated: true, completion: nil)
     }
-
+    
+    //MARK: - Text Recognition
+    func runTextRecognition(on image: UIImage) {
+        let visionImage = VisionImage(image: image)
+        textRecognizer.process(visionImage, completion: { (features, error) in
+            self.processResult(from: features, error: error)
+        })
+    }
+    
+    //MARK: - Helpers
+    func processResult(from text: VisionText?, error: Error?) {
+        guard let features = text else {
+            return
+        }
+        for block in features.blocks {
+            for line in block.lines {
+                for element in line.elements {
+                    print(element.text)
+                }
+            }
+        }
+    }
+    
 }
