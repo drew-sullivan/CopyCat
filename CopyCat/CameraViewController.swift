@@ -18,8 +18,11 @@ class CameraViewController: UITableViewController, UIImagePickerControllerDelega
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let vision = Vision.vision()
         textRecognizer = vision.onDeviceTextRecognizer()
+        
+        tableView.rowHeight = 65
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -77,7 +80,7 @@ class CameraViewController: UITableViewController, UIImagePickerControllerDelega
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LineCell", for: indexPath)
         cell.textLabel!.text = "\(lineStore.lines[indexPath.row])"
         return cell
     }

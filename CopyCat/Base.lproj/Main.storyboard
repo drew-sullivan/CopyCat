@@ -17,12 +17,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" id="Ht4-xE-B4J">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LineCell" rowHeight="65" id="Ht4-xE-B4J" customClass="LineCell" customModule="CopyCat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ht4-xE-B4J" id="q0t-0J-XTx">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1r-hU-1gk">
+                                            <rect key="frame" x="48" y="22" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69Z-nX-hKD">
+                                            <rect key="frame" x="310" y="11" width="49" height="44"/>
+                                            <state key="normal" title="Button" image="CopyToClipboardIcon"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="J1r-hU-1gk" firstAttribute="centerY" secondItem="q0t-0J-XTx" secondAttribute="centerY" id="Nwu-pn-LXR"/>
+                                        <constraint firstItem="J1r-hU-1gk" firstAttribute="leading" secondItem="q0t-0J-XTx" secondAttribute="leadingMargin" constant="32" id="dkZ-0B-B9E"/>
+                                        <constraint firstItem="69Z-nX-hKD" firstAttribute="centerY" secondItem="q0t-0J-XTx" secondAttribute="centerY" id="nr7-GW-74M"/>
+                                        <constraint firstAttribute="trailing" secondItem="69Z-nX-hKD" secondAttribute="trailing" constant="32" id="ypT-KC-hHe"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -38,4 +56,7 @@
             <point key="canvasLocation" x="1344.8" y="30.134932533733135"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CopyToClipboardIcon" width="45" height="45"/>
+    </resources>
 </document>
