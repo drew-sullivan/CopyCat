@@ -9,10 +9,11 @@
 import UIKit
 import FirebaseMLVision
 
-class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITableViewDelegate, UITableViewDataSource {
     
+    var lineStore = LineStore()
     var textRecognizer: VisionTextRecognizer!
-    var ocrLines: [String]?
+    var lineTableView: UITableView!
     
     @IBOutlet var imageView: UIImageView!
 
@@ -41,29 +42,21 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         let rotatedImage = image.rotate(radians: .pi * 2)
         let visionImage = VisionImage(image: rotatedImage!)
         textRecognizer.process(visionImage, completion: { (features, error) in
-            let lines = self.extractLinesFromDocument(from: features, error: error)
-            self.switchScreen(given: lines)
+            self.extractLinesFromDocument(from: features, error: error)
+//            print(self.lineStore.lines)
+            self.switchScreen()
         })
     }
     
-    //MARK: - Helpers
-    func extractLinesFromDocument(from text: VisionText?, error: Error?) -> [String] {
-        var lines: [String] = []
+    func extractLinesFromDocument(from text: VisionText?, error: Error?) {
         guard let features = text else {
-            return lines
+            return
         }
-        
         for block in features.blocks {
-//            print("\nBLOCK\n\(block.text)")
             for line in block.lines {
-//                print("\nLINE\n\(line.text)")
-                lines.append(line.text)
-                for element in line.elements {
-//                    print(element.text)
-                }
+                lineStore.addLine(line.text)
             }
         }
-        return lines
     }
     
     // MARK: - ImagePickerController
@@ -74,12 +67,27 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         dismiss(animated: true, completion: nil)
     }
     
-    func switchScreen(given lines: [String]) {
-        print(lines)
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let newViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "CopyPasteTableViewController") as UIViewController
-        self.present(newViewController, animated: true, completion: {
-            print("newViewController")
-        })
+    func switchScreen() {
+        let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
+        let displayWidth: CGFloat = self.view.frame.width
+        let displayHeight: CGFloat = self.view.frame.height
+        
+        lineTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
+        lineTableView.register(UITableViewCell.self, forCellReuseIdentifier: "LineCell")
+        lineTableView.dataSource = self as! UITableViewDataSource
+        lineTableView.delegate = self as! UITableViewDelegate
+        self.view.addSubview(lineTableView)
     }
+    
+    // MARK: - TableView
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return lineStore.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LineCell", for: indexPath)
+        cell.textLabel!.text = "\(lineStore.lines[indexPath.row])"
+        return cell
+    }
+    
 }
