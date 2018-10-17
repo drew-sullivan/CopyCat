@@ -74,8 +74,9 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         
         lineTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
         lineTableView.register(UITableViewCell.self, forCellReuseIdentifier: "LineCell")
-        lineTableView.dataSource = self as! UITableViewDataSource
-        lineTableView.delegate = self as! UITableViewDelegate
+        lineTableView.dataSource = self
+        lineTableView.delegate = self
+        lineTableView.rowHeight = 55
         self.view.addSubview(lineTableView)
     }
     
@@ -88,6 +89,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         let cell = tableView.dequeueReusableCell(withIdentifier: "LineCell", for: indexPath)
         cell.textLabel!.text = "\(lineStore.lines[indexPath.row])"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("LINE: \(lineStore.lines[indexPath.row])")
     }
     
 }
