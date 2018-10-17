@@ -10,7 +10,7 @@
 		03A04481C8147C3F3FADDA9E /* Pods_CopyCatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA8E22ED11A131FF4D5A10A /* Pods_CopyCatTests.framework */; };
 		7C06313721778BD3006DEAE9 /* LineStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06313621778BD3006DEAE9 /* LineStore.swift */; };
 		7CD433A92176675E003A0C88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD433A82176675E003A0C88 /* AppDelegate.swift */; };
-		7CD433AB2176675E003A0C88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD433AA2176675E003A0C88 /* ViewController.swift */; };
+		7CD433AB2176675E003A0C88 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD433AA2176675E003A0C88 /* CameraViewController.swift */; };
 		7CD433AE2176675E003A0C88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD433AC2176675E003A0C88 /* Main.storyboard */; };
 		7CD433B12176675E003A0C88 /* CopyCat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CD433AF2176675E003A0C88 /* CopyCat.xcdatamodeld */; };
 		7CD433B32176675F003A0C88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD433B22176675F003A0C88 /* Assets.xcassets */; };
@@ -20,7 +20,6 @@
 		7CD433DA21766C1A003A0C88 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7CD433D921766C1A003A0C88 /* .gitignore */; };
 		7CD433DC21766DFF003A0C88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CD433DB21766DF7003A0C88 /* GoogleService-Info.plist */; };
 		7CD433DE2176718D003A0C88 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD433DD2176718D003A0C88 /* UIImage.swift */; };
-		7CD433E021767C39003A0C88 /* LinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD433DF21767C39003A0C88 /* LinesViewController.swift */; };
 		80A4C54A4A12BFE259CAC0BE /* Pods_CopyCat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7418FF1393FB2B5C5800286 /* Pods_CopyCat.framework */; };
 		EB20ED5C743EFDF8C1A29FB2 /* Pods_CopyCatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824CFB12CDAF78695D4639F9 /* Pods_CopyCatUITests.framework */; };
 /* End PBXBuildFile section */
@@ -51,7 +50,7 @@
 		7C06313621778BD3006DEAE9 /* LineStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineStore.swift; sourceTree = "<group>"; };
 		7CD433A52176675E003A0C88 /* CopyCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopyCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD433A82176675E003A0C88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7CD433AA2176675E003A0C88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7CD433AA2176675E003A0C88 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		7CD433AD2176675E003A0C88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CD433B02176675E003A0C88 /* CopyCat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CopyCat.xcdatamodel; sourceTree = "<group>"; };
 		7CD433B22176675F003A0C88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,7 +65,6 @@
 		7CD433D921766C1A003A0C88 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7CD433DB21766DF7003A0C88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7CD433DD2176718D003A0C88 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
-		7CD433DF21767C39003A0C88 /* LinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesViewController.swift; sourceTree = "<group>"; };
 		824CFB12CDAF78695D4639F9 /* Pods_CopyCatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CopyCatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7418FF1393FB2B5C5800286 /* Pods_CopyCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CopyCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE9D0F1824236025DC842952 /* Pods-CopyCatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CopyCatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CopyCatTests/Pods-CopyCatTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,8 +151,7 @@
 				7CD433B72176675F003A0C88 /* Info.plist */,
 				7CD433A82176675E003A0C88 /* AppDelegate.swift */,
 				7C06313621778BD3006DEAE9 /* LineStore.swift */,
-				7CD433DF21767C39003A0C88 /* LinesViewController.swift */,
-				7CD433AA2176675E003A0C88 /* ViewController.swift */,
+				7CD433AA2176675E003A0C88 /* CameraViewController.swift */,
 				7CD433B22176675F003A0C88 /* Assets.xcassets */,
 				7CD433AF2176675E003A0C88 /* CopyCat.xcdatamodeld */,
 				7CD433B42176675F003A0C88 /* LaunchScreen.storyboard */,
@@ -432,10 +429,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CD433E021767C39003A0C88 /* LinesViewController.swift in Sources */,
 				7C06313721778BD3006DEAE9 /* LineStore.swift in Sources */,
 				7CD433B12176675E003A0C88 /* CopyCat.xcdatamodeld in Sources */,
-				7CD433AB2176675E003A0C88 /* ViewController.swift in Sources */,
+				7CD433AB2176675E003A0C88 /* CameraViewController.swift in Sources */,
 				7CD433A92176675E003A0C88 /* AppDelegate.swift in Sources */,
 				7CD433DE2176718D003A0C88 /* UIImage.swift in Sources */,
 			);
