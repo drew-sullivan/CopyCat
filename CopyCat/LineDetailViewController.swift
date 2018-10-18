@@ -40,7 +40,11 @@ class LineDetailViewController: UIViewController {
     }
     
     @IBAction func call(_ sender: Any) {
-        
+        let scrubbedNum = getScrubbedNum()
+        guard let number = URL(string: "tel://\(scrubbedNum)") else {
+            return
+        }
+        UIApplication.shared.open(number, options: [:])
     }
     
     @IBAction func visitURL(_ sender: Any) {
@@ -60,7 +64,18 @@ class LineDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         lineTextField.text = lineText
+    }
+    
+    fileprivate func getScrubbedNum() -> String {
+        let charsToRemove = Set<Character>(arrayLiteral: "+", "(", ")", " ")
+        var scrubbedNum = ""
+        for char in lineTextField.text! {
+            if charsToRemove.contains(char) {
+                continue
+            }
+            scrubbedNum += "\(char)"
+        }
+        return scrubbedNum
     }
 }
