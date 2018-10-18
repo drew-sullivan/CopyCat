@@ -101,8 +101,22 @@ class CameraViewController: UITableViewController, UIImagePickerControllerDelega
         toast(message: "Text added to clipboard!")
     }
     
+    // MARK: - Rotate Device
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "showLine"?:
+            if let row = tableView.indexPathForSelectedRow?.row {
+                let text = lineStore.lines[row]
+                let lineDetailViewController = segue.destination as! LineDetailViewController
+                lineDetailViewController.lineText = text
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier")
+        }
     }
     
 }

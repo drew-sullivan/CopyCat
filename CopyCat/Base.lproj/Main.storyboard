@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,6 +44,9 @@
                                         <constraint firstItem="69Z-nX-hKD" firstAttribute="centerY" secondItem="q0t-0J-XTx" secondAttribute="centerY" id="RVM-N5-Z1E"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="cLN-3V-59E" kind="show" identifier="showLine" id="To1-VW-RrD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -63,7 +67,51 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86R-F6-DTF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2284" y="30.134932533733135"/>
+            <point key="canvasLocation" x="2103" y="30"/>
+        </scene>
+        <!--Line Detail View Controller-->
+        <scene sceneID="ZZt-jW-bJl">
+            <objects>
+                <viewController id="cLN-3V-59E" customClass="LineDetailViewController" customModule="CopyCat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CCA-xi-YQ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Line" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtP-wX-FiR">
+                                <rect key="frame" x="166" y="298" width="32" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-Ng-wLv">
+                                <rect key="frame" x="139" y="336" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiS-gh-raN">
+                                <rect key="frame" x="165" y="523" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="CopyToClipboardIcon"/>
+                                <connections>
+                                    <action selector="copyToClipboard:" destination="MO8-Dp-Ycd" eventType="touchUpInside" id="5Mf-pT-efc"/>
+                                    <action selector="copyToClipboard:" destination="cLN-3V-59E" eventType="touchUpInside" id="XDK-5R-8FG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="KMc-XB-Odh"/>
+                    </view>
+                    <connections>
+                        <outlet property="lineTextField" destination="zfC-Ng-wLv" id="EtU-04-ids"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p3B-MC-TZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="MO8-Dp-Ycd" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2846" y="32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HQz-sT-vvX">

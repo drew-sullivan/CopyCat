@@ -12,6 +12,7 @@
 		7C06313C2177BCA7006DEAE9 /* LineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06313B2177BCA7006DEAE9 /* LineCell.swift */; };
 		7C1E6F4E2178BD3800A3DA50 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1E6F4D2178BD3800A3DA50 /* UIViewController.swift */; };
 		7C1E6F502178DF9E00A3DA50 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C1E6F4F2178DF9E00A3DA50 /* GoogleService-Info.plist */; };
+		7C23DB7C2178F2610061171E /* LineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23DB7B2178F2610061171E /* LineDetailViewController.swift */; };
 		7CD433A92176675E003A0C88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD433A82176675E003A0C88 /* AppDelegate.swift */; };
 		7CD433AB2176675E003A0C88 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD433AA2176675E003A0C88 /* CameraViewController.swift */; };
 		7CD433AE2176675E003A0C88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD433AC2176675E003A0C88 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		7C06313B2177BCA7006DEAE9 /* LineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineCell.swift; path = /Users/dsullivan/coding_stuff/CopyCat/CopyCat/LineCell.swift; sourceTree = "<absolute>"; };
 		7C1E6F4D2178BD3800A3DA50 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		7C1E6F4F2178DF9E00A3DA50 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "extensions/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7C23DB7B2178F2610061171E /* LineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDetailViewController.swift; sourceTree = "<group>"; };
 		7CD433A52176675E003A0C88 /* CopyCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopyCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD433A82176675E003A0C88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CD433AA2176675E003A0C88 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -151,15 +153,16 @@
 		7CD433A72176675E003A0C88 /* CopyCat */ = {
 			isa = PBXGroup;
 			children = (
-				7C06313821779300006DEAE9 /* extensions */,
-				7CD433B72176675F003A0C88 /* Info.plist */,
 				7C1E6F4F2178DF9E00A3DA50 /* GoogleService-Info.plist */,
+				7CD433B72176675F003A0C88 /* Info.plist */,
 				7CD433A82176675E003A0C88 /* AppDelegate.swift */,
-				7C06313621778BD3006DEAE9 /* LineStore.swift */,
-				7C06313B2177BCA7006DEAE9 /* LineCell.swift */,
 				7CD433AA2176675E003A0C88 /* CameraViewController.swift */,
+				7C06313B2177BCA7006DEAE9 /* LineCell.swift */,
+				7C23DB7B2178F2610061171E /* LineDetailViewController.swift */,
+				7C06313621778BD3006DEAE9 /* LineStore.swift */,
 				7CD433B22176675F003A0C88 /* Assets.xcassets */,
 				7CD433AF2176675E003A0C88 /* CopyCat.xcdatamodeld */,
+				7C06313821779300006DEAE9 /* extensions */,
 				7CD433B42176675F003A0C88 /* LaunchScreen.storyboard */,
 				7CD433AC2176675E003A0C88 /* Main.storyboard */,
 			);
@@ -438,6 +441,7 @@
 				7C1E6F4E2178BD3800A3DA50 /* UIViewController.swift in Sources */,
 				7C06313721778BD3006DEAE9 /* LineStore.swift in Sources */,
 				7CD433B12176675E003A0C88 /* CopyCat.xcdatamodeld in Sources */,
+				7C23DB7C2178F2610061171E /* LineDetailViewController.swift in Sources */,
 				7CD433AB2176675E003A0C88 /* CameraViewController.swift in Sources */,
 				7C06313C2177BCA7006DEAE9 /* LineCell.swift in Sources */,
 				7CD433A92176675E003A0C88 /* AppDelegate.swift in Sources */,
