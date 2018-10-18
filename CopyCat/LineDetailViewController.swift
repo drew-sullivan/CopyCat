@@ -17,6 +17,7 @@ class LineDetailViewController: UIViewController {
         UIPasteboard.general.string = lineText
         toast(message: "Text added to clipboard!")
     }
+    
     @IBAction func lowercaseText(_ sender: Any) {
         lineTextField.text = lineTextField.text?.lowercased()
     }
@@ -30,21 +31,14 @@ class LineDetailViewController: UIViewController {
     }
     
     @IBAction func email(_ sender: Any) {
-        if let url = URL(string: "mailto:\(lineTextField.text!)") {
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(url)
-            } else {
-                UIApplication.shared.openURL(url)
-            }
-        }
+        let str = "mailto:\(lineTextField.text!)"
+        navigateTo(str)
     }
     
     @IBAction func call(_ sender: Any) {
         let scrubbedNum = getScrubbedNum()
-        guard let number = URL(string: "tel://\(scrubbedNum)") else {
-            return
-        }
-        UIApplication.shared.open(number, options: [:])
+        let number = "tel://\(scrubbedNum)"
+        navigateTo(number)
     }
     
     @IBAction func visitURL(_ sender: Any) {
@@ -53,13 +47,7 @@ class LineDetailViewController: UIViewController {
         if !lineTextField.text!.hasPrefix(httpPrefix) {
             stringToURL = httpPrefix + stringToURL
         }
-        if let url = URL(string: stringToURL) {
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(url, options: [:])
-            } else {
-                UIApplication.shared.openURL(url)
-            }
-        }
+        navigateTo(stringToURL)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,5 +65,15 @@ class LineDetailViewController: UIViewController {
             scrubbedNum += "\(char)"
         }
         return scrubbedNum
+    }
+    
+    fileprivate func navigateTo(_ str: String) {
+        if let url = URL(string: str) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:])
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
     }
 }
