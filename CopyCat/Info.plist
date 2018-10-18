@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>FirebaseScreenReportingEnabled</key>
+	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>This app uses the camera to capture photo data</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app uses the photo library to capture photo data</string>
 </dict>
 </plist>

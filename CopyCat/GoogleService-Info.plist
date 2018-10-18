@@ -23,18 +23,20 @@
 	<key>STORAGE_BUCKET</key>
 	<string>ml-kit-codelab-99c4c.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:802996492355:ios:693c00b96c712e8c</string>
 	<key>DATABASE_URL</key>
 	<string>https://ml-kit-codelab-99c4c.firebaseio.com</string>
+	<key></key>
+	<false/>
 </dict>
 </plist>
