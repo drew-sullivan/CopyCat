@@ -14,7 +14,15 @@ class CameraViewController: UITableViewController, UIImagePickerControllerDelega
     var lineStore = LineStore()
     var textRecognizer: VisionTextRecognizer!
     var isFirstTime: Bool = true
-
+    
+    @IBOutlet var cameraButton: UIBarButtonItem!
+    
+    @IBAction func takePicture(_ sender: Any) {
+        lineStore.lines = []
+        isFirstTime = true
+        presentCamera()
+    }
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
