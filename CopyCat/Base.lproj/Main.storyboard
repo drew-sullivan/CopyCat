@@ -34,7 +34,7 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69Z-nX-hKD">
                                             <rect key="frame" x="298" y="10" width="45" height="45"/>
-                                            <state key="normal" image="CopyToClipboardIcon"/>
+                                            <state key="normal" image="Right Arrow"/>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -194,12 +194,12 @@
     </scenes>
     <resources>
         <image name="Copy To Clipboard Icon" width="45" height="45"/>
-        <image name="CopyToClipboardIcon" width="45" height="45"/>
         <image name="Email Icon" width="45" height="45"/>
         <image name="Lowercase Icon" width="45" height="45"/>
         <image name="Manager Icon" width="45" height="45"/>
         <image name="Open In Browser Icon" width="45" height="45"/>
         <image name="Phone Icon" width="45" height="45"/>
+        <image name="Right Arrow" width="45" height="45"/>
         <image name="Uppercase Icon" width="45" height="45"/>
     </resources>
 </document>
