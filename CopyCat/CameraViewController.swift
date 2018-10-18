@@ -82,6 +82,8 @@ class CameraViewController: UITableViewController, UIImagePickerControllerDelega
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LineCell", for: indexPath)
         cell.textLabel!.text = "\(lineStore.lines[indexPath.row])"
+        cell.separatorInset = UIEdgeInsets.zero
+        cell.layoutMargins = UIEdgeInsets.zero
         return cell
     }
     

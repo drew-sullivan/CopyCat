@@ -16,6 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LineCell" rowHeight="65" id="Ht4-xE-B4J" customClass="LineCell" customModule="CopyCat" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="65"/>
@@ -24,22 +25,22 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1r-hU-1gk">
-                                            <rect key="frame" x="48" y="22" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1r-hU-1gk">
+                                            <rect key="frame" x="32" y="32.5" width="0.0" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69Z-nX-hKD">
-                                            <rect key="frame" x="310" y="11" width="49" height="44"/>
-                                            <state key="normal" title="Button" image="CopyToClipboardIcon"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69Z-nX-hKD">
+                                            <rect key="frame" x="298" y="10" width="45" height="45"/>
+                                            <state key="normal" image="CopyToClipboardIcon"/>
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="J1r-hU-1gk" firstAttribute="centerY" secondItem="q0t-0J-XTx" secondAttribute="centerY" id="Nwu-pn-LXR"/>
-                                        <constraint firstItem="J1r-hU-1gk" firstAttribute="leading" secondItem="q0t-0J-XTx" secondAttribute="leadingMargin" constant="32" id="dkZ-0B-B9E"/>
-                                        <constraint firstItem="69Z-nX-hKD" firstAttribute="centerY" secondItem="q0t-0J-XTx" secondAttribute="centerY" id="nr7-GW-74M"/>
-                                        <constraint firstAttribute="trailing" secondItem="69Z-nX-hKD" secondAttribute="trailing" constant="32" id="ypT-KC-hHe"/>
+                                        <constraint firstItem="J1r-hU-1gk" firstAttribute="leading" secondItem="q0t-0J-XTx" secondAttribute="leading" constant="32" id="5k4-5g-sE6"/>
+                                        <constraint firstItem="J1r-hU-1gk" firstAttribute="centerY" secondItem="q0t-0J-XTx" secondAttribute="centerY" id="9Uf-C7-PZ9"/>
+                                        <constraint firstAttribute="trailing" secondItem="69Z-nX-hKD" secondAttribute="trailing" constant="32" id="HHu-eN-ohT"/>
+                                        <constraint firstItem="69Z-nX-hKD" firstAttribute="centerY" secondItem="q0t-0J-XTx" secondAttribute="centerY" id="RVM-N5-Z1E"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
