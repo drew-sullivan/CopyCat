@@ -88,7 +88,9 @@ class CameraViewController: UITableViewController, UIImagePickerControllerDelega
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("LINE: \(lineStore.lines[indexPath.row])")
+        let text = lineStore.lines[indexPath.row]
+        UIPasteboard.general.string = text
+        toast(message: "Text added to clipboard!")
     }
     
 }
