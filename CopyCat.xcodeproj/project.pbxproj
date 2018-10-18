@@ -11,6 +11,7 @@
 		7C06313721778BD3006DEAE9 /* LineStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06313621778BD3006DEAE9 /* LineStore.swift */; };
 		7C06313C2177BCA7006DEAE9 /* LineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06313B2177BCA7006DEAE9 /* LineCell.swift */; };
 		7C1E6F4E2178BD3800A3DA50 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1E6F4D2178BD3800A3DA50 /* UIViewController.swift */; };
+		7C1E6F502178DF9E00A3DA50 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C1E6F4F2178DF9E00A3DA50 /* GoogleService-Info.plist */; };
 		7CD433A92176675E003A0C88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD433A82176675E003A0C88 /* AppDelegate.swift */; };
 		7CD433AB2176675E003A0C88 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD433AA2176675E003A0C88 /* CameraViewController.swift */; };
 		7CD433AE2176675E003A0C88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD433AC2176675E003A0C88 /* Main.storyboard */; };
@@ -20,7 +21,6 @@
 		7CD433C12176675F003A0C88 /* CopyCatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD433C02176675F003A0C88 /* CopyCatTests.swift */; };
 		7CD433CC2176675F003A0C88 /* CopyCatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD433CB2176675F003A0C88 /* CopyCatUITests.swift */; };
 		7CD433DA21766C1A003A0C88 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7CD433D921766C1A003A0C88 /* .gitignore */; };
-		7CD433DC21766DFF003A0C88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CD433DB21766DF7003A0C88 /* GoogleService-Info.plist */; };
 		7CD433DE2176718D003A0C88 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD433DD2176718D003A0C88 /* UIImage.swift */; };
 		80A4C54A4A12BFE259CAC0BE /* Pods_CopyCat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7418FF1393FB2B5C5800286 /* Pods_CopyCat.framework */; };
 		EB20ED5C743EFDF8C1A29FB2 /* Pods_CopyCatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824CFB12CDAF78695D4639F9 /* Pods_CopyCatUITests.framework */; };
@@ -52,6 +52,7 @@
 		7C06313621778BD3006DEAE9 /* LineStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineStore.swift; sourceTree = "<group>"; };
 		7C06313B2177BCA7006DEAE9 /* LineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineCell.swift; path = /Users/dsullivan/coding_stuff/CopyCat/CopyCat/LineCell.swift; sourceTree = "<absolute>"; };
 		7C1E6F4D2178BD3800A3DA50 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		7C1E6F4F2178DF9E00A3DA50 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "extensions/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7CD433A52176675E003A0C88 /* CopyCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopyCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD433A82176675E003A0C88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CD433AA2176675E003A0C88 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +68,6 @@
 		7CD433CB2176675F003A0C88 /* CopyCatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyCatUITests.swift; sourceTree = "<group>"; };
 		7CD433CD2176675F003A0C88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CD433D921766C1A003A0C88 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		7CD433DB21766DF7003A0C88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7CD433DD2176718D003A0C88 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		824CFB12CDAF78695D4639F9 /* Pods_CopyCatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CopyCatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7418FF1393FB2B5C5800286 /* Pods_CopyCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CopyCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,8 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				7C06313821779300006DEAE9 /* extensions */,
-				7CD433DB21766DF7003A0C88 /* GoogleService-Info.plist */,
 				7CD433B72176675F003A0C88 /* Info.plist */,
+				7C1E6F4F2178DF9E00A3DA50 /* GoogleService-Info.plist */,
 				7CD433A82176675E003A0C88 /* AppDelegate.swift */,
 				7C06313621778BD3006DEAE9 /* LineStore.swift */,
 				7C06313B2177BCA7006DEAE9 /* LineCell.swift */,
@@ -305,7 +305,7 @@
 			files = (
 				7CD433DA21766C1A003A0C88 /* .gitignore in Resources */,
 				7CD433B62176675F003A0C88 /* LaunchScreen.storyboard in Resources */,
-				7CD433DC21766DFF003A0C88 /* GoogleService-Info.plist in Resources */,
+				7C1E6F502178DF9E00A3DA50 /* GoogleService-Info.plist in Resources */,
 				7CD433B32176675F003A0C88 /* Assets.xcassets in Resources */,
 				7CD433AE2176675E003A0C88 /* Main.storyboard in Resources */,
 			);
