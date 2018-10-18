@@ -101,4 +101,8 @@ class CameraViewController: UITableViewController, UIImagePickerControllerDelega
         toast(message: "Text added to clipboard!")
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        tableView.reloadData()
+    }
+    
 }
