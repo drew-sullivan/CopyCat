@@ -95,12 +95,6 @@ class CameraViewController: UITableViewController, UIImagePickerControllerDelega
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let text = lineStore.lines[indexPath.row]
-        UIPasteboard.general.string = text
-        toast(message: "Text added to clipboard!")
-    }
-    
     // MARK: - Rotate Device
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         tableView.reloadData()

@@ -14,7 +14,48 @@ class LineDetailViewController: UIViewController {
     var lineText: String!
     
     @IBAction func copyToClipboard(_ sender: Any) {
-        print("tapped")
+        UIPasteboard.general.string = lineText
+        toast(message: "Text added to clipboard!")
+    }
+    @IBAction func lowercaseText(_ sender: Any) {
+        lineTextField.text = lineTextField.text?.lowercased()
+    }
+    
+    @IBAction func uppercaseText(_ sender: Any) {
+        lineTextField.text = lineTextField.text?.uppercased()
+    }
+    
+    @IBAction func titleCaseText(_ sender: Any) {
+        lineTextField.text = lineTextField.text?.capitalized
+    }
+    
+    @IBAction func email(_ sender: Any) {
+        if let url = URL(string: "mailto:\(lineTextField.text!)") {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+    }
+    
+    @IBAction func call(_ sender: Any) {
+        
+    }
+    
+    @IBAction func visitURL(_ sender: Any) {
+        var stringToURL = lineTextField.text!
+        let httpPrefix = "http://www."
+        if !lineTextField.text!.hasPrefix(httpPrefix) {
+            stringToURL = httpPrefix + stringToURL
+        }
+        if let url = URL(string: stringToURL) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:])
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
