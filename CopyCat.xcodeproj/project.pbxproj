@@ -159,6 +159,7 @@
 				7CD433B72176675F003A0C88 /* Info.plist */,
 				7CD433A82176675E003A0C88 /* AppDelegate.swift */,
 				7CD433AA2176675E003A0C88 /* CameraViewController.swift */,
+				7C4190C5217A153D007FE568 /* HomePageViewController.swift */,
 				7C06313B2177BCA7006DEAE9 /* LineCell.swift */,
 				7C23DB7B2178F2610061171E /* LineDetailViewController.swift */,
 				7C06313621778BD3006DEAE9 /* LineStore.swift */,
@@ -167,7 +168,6 @@
 				7C06313821779300006DEAE9 /* extensions */,
 				7CD433B42176675F003A0C88 /* LaunchScreen.storyboard */,
 				7CD433AC2176675E003A0C88 /* Main.storyboard */,
-				7C4190C5217A153D007FE568 /* HomePageViewController.swift */,
 			);
 			path = CopyCat;
 			sourceTree = "<group>";

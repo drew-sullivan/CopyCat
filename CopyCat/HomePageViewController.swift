@@ -10,26 +10,31 @@ import UIKit
 
 class HomePageViewController: UIViewController {
     
-    var choice: UIImagePickerController.SourceType?
+    var mediaChoice: UIImagePickerController.SourceType?
     
     @IBOutlet var cameraButton: UIButton!
-    @IBOutlet var cameraRollButton: UIButton!
+    @IBOutlet var photoLibraryButton: UIButton!
     
-    @IBAction func cameraButtonTapped(_ sender: Any) {
-        choice = .camera
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
-    @IBAction func cameraRollButtonTapped(_ sender: Any) {
-        choice = .photoLibrary
+    @IBAction func cameraButtonTapped(_ sender: Any) {
+        mediaChoice = .camera
+    }
+    
+    @IBAction func photoLibraryButtonTapped(_ sender: Any) {
+        mediaChoice = .photoLibrary
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
-        case "showLinesViewController"?:
+        case "showLinesTableViewController"?:
             let cameraViewController = segue.destination as! CameraViewController
-            cameraViewController.mediaChoice = choice
+            cameraViewController.mediaChoice = mediaChoice
         default:
-            preconditionFailure("Unexpected segue identifier")        }
+            preconditionFailure("Unexpected segue identifier")
+        }
     }
     
 }

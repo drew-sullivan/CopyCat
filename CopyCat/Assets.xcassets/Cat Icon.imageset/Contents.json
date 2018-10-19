@@ -2,17 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icons8-compact-camera-64.png",
+      "filename" : "icons8-cat-100.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icons8-compact-camera-128.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Webp.net-resizeimage (1).png",
       "scale" : "3x"
     }
   ],
