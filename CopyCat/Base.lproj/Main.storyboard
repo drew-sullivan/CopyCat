@@ -67,7 +67,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86R-F6-DTF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2103" y="30"/>
+            <point key="canvasLocation" x="2370" y="32"/>
         </scene>
         <!--Line Detail View Controller-->
         <scene sceneID="ZZt-jW-bJl">
@@ -165,7 +165,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3B-MC-TZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="MO8-Dp-Ycd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2845.5999999999999" y="31.934032983508249"/>
+            <point key="canvasLocation" x="3078" y="32"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HQz-sT-vvX">
@@ -184,22 +184,67 @@
                         <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </toolbar>
                     <connections>
-                        <segue destination="77V-St-q0K" kind="relationship" relationship="rootViewController" id="0id-Jf-ahn"/>
+                        <segue destination="U4b-dN-Tbg" kind="relationship" relationship="rootViewController" id="Bh6-x4-CPM"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gu4-t3-Dwd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1344.8" y="30.134932533733135"/>
+            <point key="canvasLocation" x="903" y="29"/>
+        </scene>
+        <!--Home Page View Controller-->
+        <scene sceneID="gCQ-Tl-qm1">
+            <objects>
+                <viewController id="U4b-dN-Tbg" customClass="HomePageViewController" customModule="CopyCat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zAo-cB-t0R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8O7-gC-OCS">
+                                <rect key="frame" x="82" y="296" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Camera Icon"/>
+                                <connections>
+                                    <action selector="cameraButtonTapped:" destination="U4b-dN-Tbg" eventType="touchUpInside" id="e5y-0K-pxG"/>
+                                    <segue destination="77V-St-q0K" kind="show" identifier="showLinesViewController" id="DsX-9b-Zyj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZc-cg-IZL">
+                                <rect key="frame" x="227" y="309" width="48" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Photo Gallery Icon"/>
+                                <connections>
+                                    <action selector="cameraRollButtonTapped:" destination="U4b-dN-Tbg" eventType="touchUpInside" id="bx6-4x-agL"/>
+                                    <segue destination="77V-St-q0K" kind="show" identifier="showLinesViewController" id="oUY-y3-Vsr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PIg-tD-ug1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bTq-T9-WQj"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="8O7-gC-OCS" id="x7p-XC-JfW"/>
+                        <outlet property="cameraRollButton" destination="OZc-cg-IZL" id="mBR-2x-CPa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jtt-kR-MUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1632.8" y="31.934032983508249"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Camera Icon" width="48" height="48"/>
         <image name="Copy To Clipboard Icon" width="45" height="45"/>
         <image name="Email Icon" width="45" height="45"/>
         <image name="Lowercase Icon" width="45" height="45"/>
         <image name="Manager Icon" width="45" height="45"/>
         <image name="Open In Browser Icon" width="45" height="45"/>
         <image name="Phone Icon" width="45" height="45"/>
+        <image name="Photo Gallery Icon" width="48" height="48"/>
         <image name="Right Arrow" width="45" height="45"/>
         <image name="Uppercase Icon" width="45" height="45"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="DsX-9b-Zyj"/>
+    </inferredMetricsTieBreakers>
 </document>

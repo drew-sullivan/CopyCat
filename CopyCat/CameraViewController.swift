@@ -11,6 +11,7 @@ import FirebaseMLVision
 
 class CameraViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var mediaChoice: UIImagePickerController.SourceType!
     var lineStore = LineStore()
     var textRecognizer: VisionTextRecognizer!
     var isFirstTime: Bool = true
@@ -65,8 +66,12 @@ class CameraViewController: UITableViewController, UIImagePickerControllerDelega
             return
         }
         let imagePicker = UIImagePickerController()
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            imagePicker.sourceType = .camera
+        if mediaChoice == .camera {
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                imagePicker.sourceType = .camera
+            } else {
+                imagePicker.sourceType = .photoLibrary
+            }
         } else {
             imagePicker.sourceType = .photoLibrary
         }
@@ -100,6 +105,8 @@ class CameraViewController: UITableViewController, UIImagePickerControllerDelega
         tableView.reloadData()
     }
     
+    
+    //MARK: - Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "showLine"?:
