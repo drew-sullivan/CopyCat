@@ -15,7 +15,7 @@
 		7C23DB7C2178F2610061171E /* LineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C23DB7B2178F2610061171E /* LineDetailViewController.swift */; };
 		7C4190C6217A153D007FE568 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4190C5217A153D007FE568 /* HomePageViewController.swift */; };
 		7CD433A92176675E003A0C88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD433A82176675E003A0C88 /* AppDelegate.swift */; };
-		7CD433AB2176675E003A0C88 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD433AA2176675E003A0C88 /* CameraViewController.swift */; };
+		7CD433AB2176675E003A0C88 /* LinesFoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD433AA2176675E003A0C88 /* LinesFoundTableViewController.swift */; };
 		7CD433AE2176675E003A0C88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CD433AC2176675E003A0C88 /* Main.storyboard */; };
 		7CD433B12176675E003A0C88 /* CopyCat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7CD433AF2176675E003A0C88 /* CopyCat.xcdatamodeld */; };
 		7CD433B32176675F003A0C88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CD433B22176675F003A0C88 /* Assets.xcassets */; };
@@ -59,7 +59,7 @@
 		7C4190C5217A153D007FE568 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		7CD433A52176675E003A0C88 /* CopyCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CopyCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CD433A82176675E003A0C88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7CD433AA2176675E003A0C88 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		7CD433AA2176675E003A0C88 /* LinesFoundTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesFoundTableViewController.swift; sourceTree = "<group>"; };
 		7CD433AD2176675E003A0C88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CD433B02176675E003A0C88 /* CopyCat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CopyCat.xcdatamodel; sourceTree = "<group>"; };
 		7CD433B22176675F003A0C88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 				7C1E6F4F2178DF9E00A3DA50 /* GoogleService-Info.plist */,
 				7CD433B72176675F003A0C88 /* Info.plist */,
 				7CD433A82176675E003A0C88 /* AppDelegate.swift */,
-				7CD433AA2176675E003A0C88 /* CameraViewController.swift */,
+				7CD433AA2176675E003A0C88 /* LinesFoundTableViewController.swift */,
 				7C4190C5217A153D007FE568 /* HomePageViewController.swift */,
 				7C06313B2177BCA7006DEAE9 /* LineCell.swift */,
 				7C23DB7B2178F2610061171E /* LineDetailViewController.swift */,
@@ -446,7 +446,7 @@
 				7C4190C6217A153D007FE568 /* HomePageViewController.swift in Sources */,
 				7CD433B12176675E003A0C88 /* CopyCat.xcdatamodeld in Sources */,
 				7C23DB7C2178F2610061171E /* LineDetailViewController.swift in Sources */,
-				7CD433AB2176675E003A0C88 /* CameraViewController.swift in Sources */,
+				7CD433AB2176675E003A0C88 /* LinesFoundTableViewController.swift in Sources */,
 				7C06313C2177BCA7006DEAE9 /* LineCell.swift in Sources */,
 				7CD433A92176675E003A0C88 /* AppDelegate.swift in Sources */,
 				7CD433DE2176718D003A0C88 /* UIImage.swift in Sources */,

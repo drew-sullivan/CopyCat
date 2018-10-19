@@ -31,7 +31,7 @@ class HomePageViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "showLinesTableViewController"?:
-            let cameraViewController = segue.destination as! CameraViewController
+            let cameraViewController = segue.destination as! LinesFoundTableViewController
             cameraViewController.mediaChoice = mediaChoice
         default:
             preconditionFailure("Unexpected segue identifier")

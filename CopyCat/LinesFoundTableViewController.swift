@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseMLVision
 
-class CameraViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class LinesFoundTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var mediaChoice: UIImagePickerController.SourceType!
     var lineStore = LineStore()
