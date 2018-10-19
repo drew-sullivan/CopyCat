@@ -14,7 +14,7 @@
             <objects>
                 <tableViewController id="77V-St-q0K" customClass="CameraViewController" customModule="CopyCat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2mA-YM-jwt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -59,7 +59,29 @@
                             <outlet property="delegate" destination="77V-St-q0K" id="Ufl-ci-n3O"/>
                         </connections>
                     </tableView>
+                    <toolbarItems>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="UyB-1F-bvL"/>
+                        <barButtonItem title="Camera" image="Camera Glyph" id="XIY-KN-JMH">
+                            <color key="tintColor" red="0.88863331079999996" green="0.52463644740000004" blue="0.2379302382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="takePicture:" destination="77V-St-q0K" id="yFT-nh-aOc"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="SkN-cB-rc1"/>
+                        <barButtonItem title="Photo Gallery" image="Photo Gallery Glyph" id="TXj-JN-Ix4">
+                            <color key="tintColor" red="0.88863331079999996" green="0.52463644740000004" blue="0.2379302382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="getPictureFromPhotoGallery:" destination="77V-St-q0K" id="95a-Nd-vW8"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="rXT-qh-JRR"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="Lines" id="qVX-e9-iGy"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="XIY-KN-JMH" id="Wch-FQ-OGi"/>
+                        <outlet property="photoGalleryButton" destination="TXj-JN-Ix4" id="qCa-Ch-uew"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="86R-F6-DTF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,59 +92,59 @@
             <objects>
                 <viewController id="cLN-3V-59E" customClass="LineDetailViewController" customModule="CopyCat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CCA-xi-YQ5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-Ng-wLv">
-                                <rect key="frame" x="60" y="353" width="294" height="30"/>
+                                <rect key="frame" x="60" y="331" width="294" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGB-6t-Os5">
-                                <rect key="frame" x="60" y="407" width="67" height="67"/>
+                                <rect key="frame" x="60" y="385" width="67" height="67"/>
                                 <state key="normal" image="Lowercase Icon"/>
                                 <connections>
                                     <action selector="lowercaseText:" destination="cLN-3V-59E" eventType="touchUpInside" id="YUK-fQ-EOH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5T8-QR-j0p">
-                                <rect key="frame" x="60" y="490" width="67" height="67"/>
+                                <rect key="frame" x="60" y="468" width="67" height="67"/>
                                 <state key="normal" image="Uppercase Icon"/>
                                 <connections>
                                     <action selector="uppercaseText:" destination="cLN-3V-59E" eventType="touchUpInside" id="Tlr-On-5my"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miK-xD-Cmw">
-                                <rect key="frame" x="60" y="573" width="67" height="67"/>
+                                <rect key="frame" x="60" y="551" width="67" height="67"/>
                                 <state key="normal" image="Manager Icon"/>
                                 <connections>
                                     <action selector="titleCaseText:" destination="cLN-3V-59E" eventType="touchUpInside" id="y34-NC-Rbx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w94-FM-ytK">
-                                <rect key="frame" x="287" y="407" width="67" height="67"/>
+                                <rect key="frame" x="287" y="385" width="67" height="67"/>
                                 <state key="normal" image="Email Icon"/>
                                 <connections>
                                     <action selector="email:" destination="cLN-3V-59E" eventType="touchUpInside" id="quq-8m-I6y"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOv-Ia-m20">
-                                <rect key="frame" x="287" y="490" width="67" height="67"/>
+                                <rect key="frame" x="287" y="468" width="67" height="67"/>
                                 <state key="normal" image="Phone Icon"/>
                                 <connections>
                                     <action selector="call:" destination="cLN-3V-59E" eventType="touchUpInside" id="yyd-qZ-8Q6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="811-8k-GXi">
-                                <rect key="frame" x="287" y="573" width="67" height="67"/>
+                                <rect key="frame" x="287" y="551" width="67" height="67"/>
                                 <state key="normal" image="Open In Browser Icon"/>
                                 <connections>
                                     <action selector="visitURL:" destination="cLN-3V-59E" eventType="touchUpInside" id="AW1-C0-q0D"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiS-gh-raN">
-                                <rect key="frame" x="173.66666666666666" y="490" width="67" height="67"/>
+                                <rect key="frame" x="173.66666666666666" y="468" width="67" height="67"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" image="Copy To Clipboard Icon"/>
                                 <connections>
@@ -166,7 +188,7 @@
         <!--Navigation Controller-->
         <scene sceneID="HQz-sT-vvX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fB9-uK-bh1" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="fB9-uK-bh1" sceneMemberID="viewController">
                     <toolbarItems>
                         <barButtonItem systemItem="camera" id="rKf-zH-9gk"/>
                     </toolbarItems>
@@ -175,9 +197,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lfw-Hc-zSd">
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m3D-2F-jdb">
+                        <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </toolbar>
                     <connections>
                         <segue destination="U4b-dN-Tbg" kind="relationship" relationship="rootViewController" id="Bh6-x4-CPM"/>
@@ -236,6 +258,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Camera Glyph" width="54" height="54"/>
         <image name="Camera Icon" width="144" height="144"/>
         <image name="Cat Logo" width="75.540985107421875" height="75.540985107421875"/>
         <image name="Copy To Clipboard Icon" width="67.5" height="67.5"/>
@@ -244,6 +267,7 @@
         <image name="Manager Icon" width="67.5" height="67.5"/>
         <image name="Open In Browser Icon" width="67.5" height="67.5"/>
         <image name="Phone Icon" width="67.5" height="67.5"/>
+        <image name="Photo Gallery Glyph" width="54" height="54"/>
         <image name="Photo Gallery Icon" width="144" height="144"/>
         <image name="Right Arrow" width="67.5" height="67.5"/>
         <image name="Uppercase Icon" width="67.5" height="67.5"/>

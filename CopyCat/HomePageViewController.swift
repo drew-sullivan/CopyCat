@@ -17,6 +17,7 @@ class HomePageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     @IBAction func cameraButtonTapped(_ sender: Any) {

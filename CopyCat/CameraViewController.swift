@@ -17,12 +17,22 @@ class CameraViewController: UITableViewController, UIImagePickerControllerDelega
     var isFirstTime: Bool = true
     
     @IBOutlet var cameraButton: UIBarButtonItem!
+    @IBOutlet var photoGalleryButton: UIBarButtonItem!
     
+    
+    //MARK: - Actions
     @IBAction func takePicture(_ sender: Any) {
-        lineStore.lines = []
-        isFirstTime = true
-        presentCamera()
+        resetSettings()
+        mediaChoice = .camera
+        getPicture()
     }
+    
+    @IBAction func getPictureFromPhotoGallery(_ sender: Any) {
+        resetSettings()
+        mediaChoice = .photoLibrary
+        getPicture()
+    }
+    
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -34,9 +44,19 @@ class CameraViewController: UITableViewController, UIImagePickerControllerDelega
         tableView.rowHeight = 65
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setToolbarHidden(false, animated: true)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidLoad()
-        presentCamera()
+        getPicture()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setToolbarHidden(true, animated: true)
     }
     
     //MARK: - Text Recognition
@@ -61,7 +81,7 @@ class CameraViewController: UITableViewController, UIImagePickerControllerDelega
     }
     
     // MARK: - ImagePickerController
-    func presentCamera() {
+    func getPicture() {
         if !isFirstTime {
             return
         }
@@ -118,6 +138,10 @@ class CameraViewController: UITableViewController, UIImagePickerControllerDelega
         default:
             preconditionFailure("Unexpected segue identifier")
         }
+    }
+    fileprivate func resetSettings() {
+        lineStore.lines = []
+        isFirstTime = true
     }
     
 }
