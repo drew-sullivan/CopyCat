@@ -46,6 +46,7 @@ class CameraViewController: UITableViewController, UIImagePickerControllerDelega
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationItem.setHidesBackButton(true, animated: false)
         self.navigationController?.setToolbarHidden(false, animated: true)
     }
     
