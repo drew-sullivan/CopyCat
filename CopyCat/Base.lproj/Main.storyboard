@@ -61,14 +61,14 @@
                     </tableView>
                     <toolbarItems>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="UyB-1F-bvL"/>
-                        <barButtonItem title="Camera" image="Camera Glyph" id="XIY-KN-JMH">
+                        <barButtonItem title="Camera" image="Camera Glyph" id="XIY-KN-JMH" userLabel="Camera">
                             <color key="tintColor" red="0.88863331079999996" green="0.52463644740000004" blue="0.2379302382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="takePicture:" destination="77V-St-q0K" id="yFT-nh-aOc"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="SkN-cB-rc1"/>
-                        <barButtonItem title="Photo Gallery" image="Photo Gallery Glyph" id="TXj-JN-Ix4">
+                        <barButtonItem title="Photo Gallery" image="Photo Gallery Glyph" id="TXj-JN-Ix4" userLabel="Photo Gallery">
                             <color key="tintColor" red="0.88863331079999996" green="0.52463644740000004" blue="0.2379302382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="getPictureFromPhotoGallery:" destination="77V-St-q0K" id="95a-Nd-vW8"/>
