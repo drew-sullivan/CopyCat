@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="9HL-PH-IWK">
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" id="9HL-PH-IWK">
                             <rect key="frame" x="0.0" y="93" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items/>
@@ -102,51 +102,87 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGB-6t-Os5">
-                                <rect key="frame" x="60" y="385" width="67" height="67"/>
-                                <state key="normal" image="Lowercase Icon"/>
+                                <rect key="frame" x="60" y="385" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="eAc-5c-2b1"/>
+                                    <constraint firstAttribute="width" secondItem="RGB-6t-Os5" secondAttribute="height" multiplier="1:1" id="nrq-9p-Q1R"/>
+                                    <constraint firstAttribute="height" constant="75" id="tbN-cu-gQm"/>
+                                </constraints>
+                                <state key="normal" image="Lowercase - Color"/>
                                 <connections>
                                     <action selector="lowercaseText:" destination="cLN-3V-59E" eventType="touchUpInside" id="YUK-fQ-EOH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5T8-QR-j0p">
-                                <rect key="frame" x="60" y="468" width="67" height="67"/>
-                                <state key="normal" image="Uppercase Icon"/>
+                                <rect key="frame" x="60" y="476" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="DV6-aS-l95"/>
+                                    <constraint firstAttribute="width" secondItem="5T8-QR-j0p" secondAttribute="height" multiplier="1:1" id="VSO-Ho-uDh"/>
+                                    <constraint firstAttribute="height" constant="75" id="uS2-AY-4VD"/>
+                                </constraints>
+                                <state key="normal" image="Uppercase - Color"/>
                                 <connections>
                                     <action selector="uppercaseText:" destination="cLN-3V-59E" eventType="touchUpInside" id="Tlr-On-5my"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miK-xD-Cmw">
-                                <rect key="frame" x="60" y="551" width="67" height="67"/>
-                                <state key="normal" image="Manager Icon"/>
+                                <rect key="frame" x="60" y="567" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="2EA-KO-WHX"/>
+                                    <constraint firstAttribute="height" constant="75" id="PSY-dt-9qQ"/>
+                                    <constraint firstAttribute="width" secondItem="miK-xD-Cmw" secondAttribute="height" multiplier="1:1" id="bRs-GA-wtL"/>
+                                </constraints>
+                                <state key="normal" image="Title Case - Color"/>
                                 <connections>
                                     <action selector="titleCaseText:" destination="cLN-3V-59E" eventType="touchUpInside" id="y34-NC-Rbx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w94-FM-ytK">
-                                <rect key="frame" x="287" y="385" width="67" height="67"/>
-                                <state key="normal" image="Email Icon"/>
+                                <rect key="frame" x="279" y="385" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="w94-FM-ytK" secondAttribute="height" multiplier="1:1" id="33L-2A-zMJ"/>
+                                    <constraint firstAttribute="height" constant="75" id="T7c-OR-TfL"/>
+                                    <constraint firstAttribute="width" secondItem="w94-FM-ytK" secondAttribute="height" multiplier="1:1" id="nkK-R4-BFL"/>
+                                    <constraint firstAttribute="width" constant="75" id="sVO-m8-XTN"/>
+                                </constraints>
+                                <state key="normal" image="Email - Color"/>
                                 <connections>
                                     <action selector="email:" destination="cLN-3V-59E" eventType="touchUpInside" id="quq-8m-I6y"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOv-Ia-m20">
-                                <rect key="frame" x="287" y="468" width="67" height="67"/>
-                                <state key="normal" image="Phone Icon"/>
+                                <rect key="frame" x="279" y="476" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="aLe-Pg-bdG"/>
+                                    <constraint firstAttribute="width" secondItem="DOv-Ia-m20" secondAttribute="height" multiplier="1:1" id="jwN-7F-GtG"/>
+                                    <constraint firstAttribute="width" constant="75" id="tHu-eu-a02"/>
+                                </constraints>
+                                <state key="normal" image="Phone - Color"/>
                                 <connections>
                                     <action selector="call:" destination="cLN-3V-59E" eventType="touchUpInside" id="yyd-qZ-8Q6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="811-8k-GXi">
-                                <rect key="frame" x="287" y="551" width="67" height="67"/>
-                                <state key="normal" image="Open In Browser Icon"/>
+                                <rect key="frame" x="279" y="567" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="BhB-87-ZKa"/>
+                                    <constraint firstAttribute="width" secondItem="811-8k-GXi" secondAttribute="height" multiplier="1:1" id="SsT-gs-1Zg"/>
+                                    <constraint firstAttribute="height" constant="75" id="rIe-Zb-GTH"/>
+                                </constraints>
+                                <state key="normal" image="External Link - Color"/>
                                 <connections>
                                     <action selector="visitURL:" destination="cLN-3V-59E" eventType="touchUpInside" id="AW1-C0-q0D"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HiS-gh-raN">
-                                <rect key="frame" x="173.66666666666666" y="468" width="67" height="67"/>
+                                <rect key="frame" x="169.66666666666666" y="476" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HiS-gh-raN" secondAttribute="height" multiplier="1:1" id="Bks-6c-KO6"/>
+                                    <constraint firstAttribute="height" constant="75" id="k2T-3n-xNl"/>
+                                    <constraint firstAttribute="width" constant="75" id="qTG-bk-3Vz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" image="Copy To Clipboard Icon"/>
+                                <state key="normal" image="Clipboard - Color"/>
                                 <connections>
                                     <action selector="copyToClipboard:" destination="MO8-Dp-Ycd" eventType="touchUpInside" id="5Mf-pT-efc"/>
                                     <action selector="copyToClipboard:" destination="cLN-3V-59E" eventType="touchUpInside" id="XDK-5R-8FG"/>
@@ -217,33 +253,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Cat Logo" translatesAutoresizingMaskIntoConstraints="NO" id="gbT-fM-5RR">
-                                <rect key="frame" x="87" y="190" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                </accessibility>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cat Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Olq-cW-eIK">
+                                <rect key="frame" x="114" y="154" width="186" height="186.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Olq-cW-eIK" secondAttribute="height" multiplier="1:1" id="uMY-x6-CXy"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ie9-PZ-57z">
-                                <rect key="frame" x="53" y="462" width="144" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Camera Icon"/>
-                                <connections>
-                                    <action selector="cameraButtonTapped:" destination="U4b-dN-Tbg" eventType="touchUpInside" id="3tm-D5-zYN"/>
-                                    <segue destination="77V-St-q0K" kind="show" identifier="showLinesTableViewController" id="5n9-8v-sQY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eW-RH-Laz">
-                                <rect key="frame" x="210" y="462" width="144" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Photo Gallery Icon"/>
-                                <connections>
-                                    <action selector="photoLibraryButtonTapped:" destination="U4b-dN-Tbg" eventType="touchUpInside" id="3PA-VD-BE0"/>
-                                    <segue destination="77V-St-q0K" kind="show" identifier="showLinesTableViewController" id="9fb-Ih-W87"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGR-dp-UEf">
+                                <rect key="frame" x="107" y="448" width="200" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ie9-PZ-57z">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="EiF-2T-eMl"/>
+                                            <constraint firstAttribute="width" secondItem="Ie9-PZ-57z" secondAttribute="height" multiplier="1:1" id="Tiu-g0-1hv"/>
+                                            <constraint firstAttribute="height" constant="100" id="xA6-98-x7b"/>
+                                        </constraints>
+                                        <state key="normal" image="Camera Icon"/>
+                                        <connections>
+                                            <action selector="cameraButtonTapped:" destination="U4b-dN-Tbg" eventType="touchUpInside" id="3tm-D5-zYN"/>
+                                            <segue destination="77V-St-q0K" kind="show" identifier="showLinesTableViewController" id="5n9-8v-sQY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eW-RH-Laz">
+                                        <rect key="frame" x="100" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="3eW-RH-Laz" secondAttribute="height" multiplier="1:1" id="7ba-0Q-3cP"/>
+                                            <constraint firstAttribute="width" constant="100" id="k2z-Yt-Wmc"/>
+                                            <constraint firstAttribute="width" secondItem="3eW-RH-Laz" secondAttribute="height" multiplier="1:1" id="nJl-va-uPO"/>
+                                            <constraint firstAttribute="height" constant="100" id="z42-Wb-gMW"/>
+                                        </constraints>
+                                        <state key="normal" image="Photo Gallery Icon"/>
+                                        <connections>
+                                            <action selector="photoLibraryButtonTapped:" destination="U4b-dN-Tbg" eventType="touchUpInside" id="3PA-VD-BE0"/>
+                                            <segue destination="77V-St-q0K" kind="show" identifier="showLinesTableViewController" id="9fb-Ih-W87"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ie9-PZ-57z" firstAttribute="leading" secondItem="RGR-dp-UEf" secondAttribute="leading" id="5Gu-H3-Iga"/>
+                                    <constraint firstAttribute="trailing" secondItem="3eW-RH-Laz" secondAttribute="trailing" id="q1E-GO-Ko6"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PIg-tD-ug1" firstAttribute="bottom" secondItem="RGR-dp-UEf" secondAttribute="bottom" constant="100" id="0Tq-9P-sGn"/>
+                            <constraint firstItem="Olq-cW-eIK" firstAttribute="top" secondItem="PIg-tD-ug1" secondAttribute="top" constant="90" id="4cN-RW-H6p"/>
+                            <constraint firstItem="RGR-dp-UEf" firstAttribute="centerX" secondItem="zAo-cB-t0R" secondAttribute="centerX" id="B6f-87-LQO"/>
+                            <constraint firstItem="Olq-cW-eIK" firstAttribute="width" secondItem="zAo-cB-t0R" secondAttribute="width" multiplier="0.45" id="CFr-u3-Hdg"/>
+                            <constraint firstItem="Olq-cW-eIK" firstAttribute="centerX" secondItem="zAo-cB-t0R" secondAttribute="centerX" id="daM-5S-GvH"/>
+                            <constraint firstItem="RGR-dp-UEf" firstAttribute="top" secondItem="PIg-tD-ug1" secondAttribute="top" constant="384" id="skU-8z-T8L"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PIg-tD-ug1"/>
                     </view>
                     <navigationItem key="navigationItem" id="bTq-T9-WQj"/>
@@ -261,18 +322,18 @@
         <image name="Camera Glyph" width="54" height="54"/>
         <image name="Camera Icon" width="144" height="144"/>
         <image name="Cat Logo" width="75.540985107421875" height="75.540985107421875"/>
-        <image name="Copy To Clipboard Icon" width="67.5" height="67.5"/>
-        <image name="Email Icon" width="67.5" height="67.5"/>
-        <image name="Lowercase Icon" width="67.5" height="67.5"/>
-        <image name="Manager Icon" width="67.5" height="67.5"/>
-        <image name="Open In Browser Icon" width="67.5" height="67.5"/>
-        <image name="Phone Icon" width="67.5" height="67.5"/>
+        <image name="Clipboard - Color" width="384" height="384"/>
+        <image name="Email - Color" width="384" height="384"/>
+        <image name="External Link - Color" width="384" height="384"/>
+        <image name="Lowercase - Color" width="384" height="384"/>
+        <image name="Phone - Color" width="384" height="384"/>
         <image name="Photo Gallery Glyph" width="54" height="54"/>
         <image name="Photo Gallery Icon" width="144" height="144"/>
         <image name="Right Arrow" width="67.5" height="67.5"/>
-        <image name="Uppercase Icon" width="67.5" height="67.5"/>
+        <image name="Title Case - Color" width="384" height="384"/>
+        <image name="Uppercase - Color" width="384" height="384"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9fb-Ih-W87"/>
+        <segue reference="5n9-8v-sQY"/>
     </inferredMetricsTieBreakers>
 </document>
