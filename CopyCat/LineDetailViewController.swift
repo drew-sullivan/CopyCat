@@ -50,9 +50,19 @@ class LineDetailViewController: UIViewController, UITextFieldDelegate {
         navigateTo(stringToURL)
     }
     
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         lineTextField.text = lineText
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        view.endEditing(true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
