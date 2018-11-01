@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" id="9HL-PH-IWK">
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="9HL-PH-IWK">
                             <rect key="frame" x="0.0" y="93" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items/>
@@ -61,6 +61,7 @@
                     </tableView>
                     <toolbarItems>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="UyB-1F-bvL"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="VmB-Uz-a6C"/>
                         <barButtonItem title="Camera" image="Camera Glyph" id="XIY-KN-JMH" userLabel="Camera">
                             <color key="tintColor" red="0.88863331079999996" green="0.52463644740000004" blue="0.2379302382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -74,6 +75,7 @@
                                 <action selector="getPictureFromPhotoGallery:" destination="77V-St-q0K" id="95a-Nd-vW8"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="XtK-vM-kAe"/>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="rXT-qh-JRR"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Lines Found" id="qVX-e9-iGy"/>
