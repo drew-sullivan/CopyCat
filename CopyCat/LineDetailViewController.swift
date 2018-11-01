@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LineDetailViewController: UIViewController {
+class LineDetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var lineTextField: UITextField!
     var lineText: String!
@@ -53,6 +53,11 @@ class LineDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         lineTextField.text = lineText
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     fileprivate func getScrubbedNum() -> String {
